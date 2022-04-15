@@ -20,7 +20,7 @@ ln -f -s $(realpath ./dunst/critical.png) ~/.config/dunst/
 
 mkdir -p ~/.config/rofi/
 ln -f -s $(realpath ./rofi/config.rasi) ~/.config/rofi/
-ln -f -s $(realpath ./rofi/hark.rasi) ~/.config/rofi/
+ln -f -s $(realpath ./rofi/hawk.rasi) ~/.config/rofi/
 
 mkdir -p ~/.config/picom/
 ln -f -s $(realpath ./picom/picom.conf) ~/.config/picom/
