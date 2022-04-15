@@ -1,0 +1,19 @@
+set imap_user = "darrynjordan"
+set from = "$imap_user@icloud.com"
+
+set smtp_url = "smtp://$imap_user@smtp.mail.me.com:587/"
+set folder = "imaps://$imap_user@imap.mail.me.com/"
+
+# set imap_pass = ""
+# set smtp_url = "smtp://$imap_user:$imap_pass@smtp.mail.me.com:587/"
+# set folder = "imaps://$imap_user:$imap_pass@imap.mail.me.com/"
+
+set spoolfile = "imaps://$imap_user@imap.mail.me.com/INBOX"
+set postponed = "+Drafts"
+set record = "+Sent Messages"
+
+set imap_pipeline_depth=0
+
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
