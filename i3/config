@@ -46,6 +46,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# start a browser
+bindsym $mod+Shift+Return exec sensible-browser
+
 # kill focused window
 bindsym $mod+q kill
 bindsym $mod+Shift+q kill
@@ -187,8 +190,8 @@ bindsym $mod+r mode "resize"
 # focus_on_window_activation focus
 
 # cycle through workspaces with arrows
-bindsym $mod+ctrl+Right workspace next
-bindsym $mod+ctrl+Left workspace prev
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # remove the window title bar
 default_border pixel 2
@@ -217,7 +220,7 @@ bar {
 	separator_symbol "|"
 	position top
 	strip_workspace_numbers yes
-        tray_output none
+        # tray_output none
 
 	colors {
 	#	background $darkgray
@@ -233,10 +236,13 @@ bar {
 }
 
 # set background image
-exec --no-startup-id feh --bg-scale ~/Images/dune.jpg
+exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
 
 # start dropbox
 exec --no-startup-id dropbox start
 
 # start rofi
 bindsym $mod+space exec --no-startup-id rofi -show combi -combi-modi "drun#ssh" -modi combi
+
+# start policykit for authentication
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
