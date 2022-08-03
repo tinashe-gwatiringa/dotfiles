@@ -49,6 +49,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # start a browser
 bindsym $mod+Shift+Return exec sensible-browser
 
+# start a file browser
+bindsym $mod+Shift+n exec caja
+
 # kill focused window
 bindsym $mod+q kill
 bindsym $mod+Shift+q kill
@@ -220,7 +223,7 @@ bar {
 	separator_symbol "|"
 	position top
 	strip_workspace_numbers yes
-        # tray_output none
+        tray_output primary
 
 	colors {
 	#	background $darkgray
@@ -236,10 +239,12 @@ bar {
 }
 
 # set background image
-exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
+# exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
+exec --no-startup-id feh --bg-fill ~/.wallpaper.jpg
+
 
 # start dropbox
-exec --no-startup-id dropbox start
+exec --no-startup-id caja-dropbox start
 
 # start rofi
 bindsym $mod+space exec --no-startup-id rofi -show combi -combi-modi "drun#ssh" -modi combi
