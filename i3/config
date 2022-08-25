@@ -251,3 +251,10 @@ bindsym $mod+space exec --no-startup-id rofi -show combi -combi-modi "drun#ssh" 
 
 # start policykit for authentication
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
+# start tilda
+exec --no-startup-id /usr/bin/tilda
+
+# configure display setup
+exec xrandr --output DP-4 --primary --mode 2560x1440 --rate 143.97 --left-of DVI-D-0
+exec feh --bg-fill ~/.wallpaper.jpg
