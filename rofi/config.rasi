@@ -42,7 +42,7 @@ configuration {
 /*	scroll-method: 0;*/
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
-	theme: "~/.config/rofi/hawk.rasi";
+/*	theme: ;*/
 /*	max-history-size: 25;*/
 	combi-hide-mode-prefix: true;
 /*	matching-negate-char: '-' /* unsupported */;*/
@@ -136,23 +136,22 @@ configuration {
 /*	me-select-entry: "MousePrimary";*/
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
-/*  timeout {
+  timeout {
       action: "kb-cancel";
       delay:  0;
   }
   filebrowser {
       directories-first: true;
       sorting-method:    "name";
-  }*/
+  }
 }
 
-/* @theme "~/.config/rofi/hawk.rasi" */
+@theme "~/.config/rofi/hawk.rasi"
 
-/* listview {
+listview {
 	lines: 5;
 }
 
- window {
+window {
 	width: 35%;
 }
-*/
