@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $alt Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -150,10 +151,26 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# carry focused container to workspace
+bindsym $mod+$alt+1 move container to workspace $ws1; workspace number $ws1
+bindsym $mod+$alt+2 move container to workspace $ws2; workspace number $ws2
+bindsym $mod+$alt+3 move container to workspace $ws3; workspace number $ws3
+bindsym $mod+$alt+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+$alt+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+$alt+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+$alt+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+$alt+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+$alt+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+$alt+0 move container to workspace $ws10; workspace number $ws10
+
 # assign programs to specific workspaces
 assign [class="^firefox$" instance="^Navigator$"] → $ws2
 assign [class="^Code$" instance="^code$"] → $ws3
 assign [class="^Slack$" instance="^slack$"] → $ws10
+
+# Hiding borders adjacent to the screen edges.
+# The "smart" setting hides borders on workspaces with only one window visible.
+hide_edge_borders smart
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -220,7 +237,7 @@ client.focused          $lightblue      $darkblue       $gray           $lightbl
 bar {
         id bar-1
         status_command i3status
-	separator_symbol "|"
+	separator_symbol " "
 	position top
 	strip_workspace_numbers yes
         tray_output primary
@@ -238,23 +255,22 @@ bar {
 	}
 }
 
-# set background image
-# exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
-exec --no-startup-id feh --bg-fill ~/.wallpaper.jpg
-
-
-# start dropbox
-exec --no-startup-id caja-dropbox start
-
 # start rofi
 bindsym $mod+space exec --no-startup-id rofi -show combi -combi-modi "drun#ssh" -modi combi
 
-# start policykit for authentication
-exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
-
-# start tilda
-exec --no-startup-id /usr/bin/tilda
-
 # configure display setup
 exec xrandr --output DP-4 --primary --mode 2560x1440 --rate 143.97 --left-of DVI-D-0
-exec feh --bg-fill ~/.wallpaper.jpg
+exec --no-startup-id feh --bg-fill ~/.wallpaper.jpg
+
+# some util apps
+exec --no-startup-id caja-dropbox start
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/bin/tilda
+exec --no-startup-id /usr/bin/nm-applet
+exec --no-startup-id blueman-applet
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
