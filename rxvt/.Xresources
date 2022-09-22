@@ -42,10 +42,10 @@ URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
 !! URxvt Appearance
-*.font: xft:Ubuntu Mono:style=Regular:size=14
-*.boldFont: xft:Ubuntu Mono:style=Bold:size=14
-*.italicFont: xft:Ubuntu Mono:style=Italic:size=14
-*.boldItalicFont: xft:Ubuntu Mono:style=Bold Italic:size=14
+*.font: xft:Ubuntu Mono:style=Regular:size=12
+*.boldFont: xft:Ubuntu Mono:style=Bold:size=12
+*.italicFont: xft:Ubuntu Mono:style=Italic:size=12
+*.boldItalicFont: xft:Ubuntu Mono:style=Bold Italic:size=12
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 !URxvt.geometry: 92x24
