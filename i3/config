@@ -276,11 +276,11 @@ bar {
 
 # configure display setup
 exec xrandr --output DP-4 --primary --mode 2560x1440 --rate 143.97 --left-of DVI-D-0
-exec --no-startup-id feh --bg-fill ~/.wallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
 
 # some util apps
 exec --no-startup-id caja-dropbox start
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id /usr/bin/tilda
-exec --no-startup-id /usr/bin/nm-applet
+# exec --no-startup-id /usr/bin/nm-applet
 exec --no-startup-id blueman-applet
