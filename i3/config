@@ -280,7 +280,7 @@ exec --no-startup-id feh --bg-fill ~/.wallpaper.jpg
 
 # some util apps
 exec --no-startup-id caja-dropbox start
-exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id /usr/bin/tilda
 exec --no-startup-id /usr/bin/nm-applet
 exec --no-startup-id blueman-applet

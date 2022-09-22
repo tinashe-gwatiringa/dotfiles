@@ -67,7 +67,7 @@ sudo apt install policykit-desktop-privileges policykit-1-gnome
 
 Then add the following to the i3 config file:
 ```
-exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 ```
 
 ## Motherboard Sensors (ITE 0x8689)
