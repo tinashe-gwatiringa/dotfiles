@@ -26,7 +26,17 @@ sudo apt install firefox \
     lm-sensors \
     make \
     gcc \
-    picom
+    picom \
+    rxvt-unicode \
+    xss-lock \
+    playerctl \
+    network-manager-gnome
+```
+
+### Laptop focused apps
+```
+sudo apt install xinput \
+    brightnessctl
 ```
 
 ## Rofi
