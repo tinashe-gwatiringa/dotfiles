@@ -46,8 +46,8 @@ bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 # Brightness control
 set $brightness_notification dunstify "Backlight" "$(brightnessctl get)" -t 3000 -r 778
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -d "intel_backlight" set 5%+ && $brightness_notification
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d "intel_backlight" set 5%- && $brightness_notification
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -d "intel_backlight" set 10%+ && $brightness_notification
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d "intel_backlight" set 10%- && $brightness_notification
 
 # Trackpad tweaks
 exec --no-startup-id xinput set-prop "Synaptics TM3096-006" "libinput Tapping Enabled" 1
@@ -284,3 +284,4 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 exec --no-startup-id /usr/bin/tilda
 # exec --no-startup-id /usr/bin/nm-applet
 exec --no-startup-id blueman-applet
+exec --no-startup-id fusuma

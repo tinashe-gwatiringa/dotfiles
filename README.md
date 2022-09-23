@@ -118,3 +118,12 @@ There are two options for enabling the motherboard's onboard sensors:
 ## Icon pack
 
 A nice icon pack that goes with the Adwaita theme is called [Simply Circles](https://github.com/ju1464/Simply_Circles_Icons). To install, extract files and copy/paste as root in `/usr/share/icons/`.
+
+
+## Arb tweaks
+
+Ensure you are in the video group for brightness control to work:
+
+```bash
+sudo usermod -a -G video $USER
+```
