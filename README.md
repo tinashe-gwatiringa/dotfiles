@@ -33,7 +33,9 @@ sudo apt install firefox \
     rxvt-unicode \
     xss-lock \
     playerctl \
-    network-manager-gnome
+    network-manager-gnome\
+    file-roller\
+    xarchiver
 ```
 
 ### Laptop focused apps
