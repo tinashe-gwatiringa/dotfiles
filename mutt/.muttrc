@@ -1,4 +1,4 @@
-set imap_user = "darrynjordan"
+set imap_user = "user"
 set from = "$imap_user@icloud.com"
 
 set smtp_url = "smtp://$imap_user@smtp.mail.me.com:587/"
