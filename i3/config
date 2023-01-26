@@ -277,7 +277,7 @@ bar {
 }
 
 # configure display setup
-exec xrandr --output DP-4 --primary --mode 2560x1440 --rate 143.97 --left-of DVI-D-0
+# exec xrandr --output DP-4 --primary --mode 2560x1440 --rate 143.97 --left-of DVI-D-0
 exec --no-startup-id feh --bg-scale ~/.wallpaper.jpg
 
 # some util apps
