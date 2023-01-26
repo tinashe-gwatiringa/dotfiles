@@ -35,7 +35,9 @@ sudo apt install firefox \
     playerctl \
     network-manager-gnome\
     file-roller\
-    xarchiver
+    xarchiver \
+    autorandr \
+    redshift
 ```
 
 ### Laptop focused apps
