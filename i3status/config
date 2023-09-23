@@ -12,8 +12,15 @@ general {
 	color_degraded = "#ebcb8b"
 	color_bad = "#bf616a"
         interval = 5
+        
+        # tray {
+        #         tray_output = "primary"
+        #         slot_size = 16
+        #         slot_padding = 2
+        # }              
 }
 
+# order += "tray"
 order += "battery 0"
 #order += "disk /"
 #order += "load"
