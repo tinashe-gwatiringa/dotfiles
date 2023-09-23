@@ -25,7 +25,11 @@ font pango:Ubuntu, Font Awesome 6 Free 11
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color 000000 --tiling --nofork
+# exec --no-startup-id xss-lock -l ~/lock-screen
+
+# exec --no-startup-id xss-lock --i3lock -n -e -i ~/.background.png # lock screen
+# bindsym $mod+Escape --no-startup-id sytemctl suspend
 bindsym $mod+Escape exec --no-startup-id xset s activate                    # key combo for manual locking
 bindsym $mod+Shift+s exec --no-startup-id systemctl suspend, mode "default"
 
@@ -181,7 +185,7 @@ bindsym $mod+$alt+9 move container to workspace number $ws9; workspace number $w
 bindsym $mod+$alt+0 move container to workspace $ws10; workspace number $ws10
 
 # assign programs to specific workspaces
-assign [class="^firefox$" instance="^Navigator$"] → $ws2
+assign [class="^google-chrome$" instance="^Navigator$"] → $ws2
 assign [class="^Code$" instance="^code$"] → $ws3
 assign [class="^Slack$" instance="^slack$"] → $ws10
 
@@ -275,6 +279,7 @@ bar {
         #         urgent_workspace        $red            $red            $bg
 	}
 }
+
 
 # configure display setup
 # exec xrandr --output DP-4 --primary --mode 2560x1440 --rate 143.97 --left-of DVI-D-0

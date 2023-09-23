@@ -37,7 +37,8 @@ sudo apt install firefox \
     file-roller\
     xarchiver \
     autorandr \
-    redshift
+    redshift \
+    imagemagick
 ```
 
 ### Laptop focused apps
